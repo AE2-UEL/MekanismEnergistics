@@ -26,7 +26,7 @@ public class TileEntityPressurizedTubeTransformer extends MkEClassTransformer.Cl
 
         @Override
         public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
-            if (name.equals("update")) {
+            if (name.equals("update") || name.equals("doRestrictedTick")) {
                 return new TransformUpdate(api, super.visitMethod(access, name, desc, signature, exceptions));
             }
             return super.visitMethod(access, name, desc, signature, exceptions);

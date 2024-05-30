@@ -57,6 +57,9 @@ public class GasHandlerAdapter implements IMEInventory<IAEGasStack>, IBaseMonito
 
     @Override
     public IAEGasStack injectItems(IAEGasStack input, Actionable type, IActionSource src) {
+        if (input == null || input.getStackSize() == 0) {
+            return null;
+        }
         GasStack gasStack = input.getGasStack();
 
         if (!this.gasHandler.canReceiveGas(this.face, gasStack.getGas())) {
@@ -89,6 +92,9 @@ public class GasHandlerAdapter implements IMEInventory<IAEGasStack>, IBaseMonito
 
     @Override
     public IAEGasStack extractItems(IAEGasStack request, Actionable mode, IActionSource src) {
+        if (request == null || request.getStackSize() == 0) {
+            return null;
+        }
         GasStack requestedGasStack = request.getGasStack();
 
         if (!this.gasHandler.canDrawGas(this.face, requestedGasStack.getGas())) {

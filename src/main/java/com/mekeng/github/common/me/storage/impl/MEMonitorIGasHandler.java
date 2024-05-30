@@ -52,6 +52,9 @@ public class MEMonitorIGasHandler implements IMEMonitor<IAEGasStack>, ITickingMo
 
     @Override
     public IAEGasStack injectItems(final IAEGasStack input, final Actionable type, final IActionSource src) {
+        if (input == null || input.getStackSize() == 0) {
+            return null;
+        }
         final int filled = this.handler.receiveGas(this.face, input.getGasStack(), type == Actionable.MODULATE);
 
         if (filled == 0) {
@@ -77,6 +80,9 @@ public class MEMonitorIGasHandler implements IMEMonitor<IAEGasStack>, ITickingMo
 
     @Override
     public IAEGasStack extractItems(final IAEGasStack request, final Actionable type, final IActionSource src) {
+        if (request == null || request.getStackSize() == 0) {
+            return null;
+        }
         final GasStack removed = Utils.drawGas(this.handler, request.getGasStack(), this.face, request.getGasStack().amount, type == Actionable.MODULATE);
 
         if (removed == null || !removed.isGasEqual(request.getGasStack()) || removed.amount == 0) {

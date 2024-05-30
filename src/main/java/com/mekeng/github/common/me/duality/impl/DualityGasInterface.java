@@ -13,6 +13,7 @@ import appeng.api.networking.IGridNode;
 import appeng.api.networking.energy.IEnergySource;
 import appeng.api.networking.security.IActionHost;
 import appeng.api.networking.security.IActionSource;
+import appeng.api.networking.storage.IStorageGrid;
 import appeng.api.networking.ticking.IGridTickable;
 import appeng.api.networking.ticking.TickRateModulation;
 import appeng.api.networking.ticking.TickingRequest;
@@ -54,6 +55,7 @@ import com.mekeng.github.common.me.inventory.IGasInventory;
 import com.mekeng.github.common.me.inventory.IGasInventoryHost;
 import com.mekeng.github.common.me.inventory.impl.GasInvHandler;
 import com.mekeng.github.common.me.inventory.impl.GasInventory;
+import com.mekeng.github.common.me.inventory.impl.GasNetworkAdapter;
 import com.mekeng.github.common.me.storage.IGasStorageChannel;
 import com.mekeng.github.common.me.storage.impl.MEMonitorIGasHandler;
 import gregtech.api.block.machines.BlockMachine;
@@ -75,6 +77,7 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.items.IItemHandler;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.Collection;
 import java.util.EnumSet;
 import java.util.HashSet;
@@ -125,7 +128,16 @@ public class DualityGasInterface implements IGridTickable, IStorageMonitorable, 
         for (int i = 0; i < NUMBER_OF_TANKS; ++i) {
             this.requireWork[i] = null;
         }
-        this.handler = new GasInvHandler(this.tanks);
+        this.handler = new GasNetworkAdapter(this::getStorageGrid, this.interfaceRequestSource, this.tanks);
+    }
+
+    @Nullable
+    private IStorageGrid getStorageGrid() {
+        try {
+            return this.gridProxy.getStorage();
+        } catch (GridAccessException e) {
+            return null;
+        }
     }
 
     @Override

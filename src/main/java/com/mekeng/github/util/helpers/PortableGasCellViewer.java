@@ -62,6 +62,9 @@ public class PortableGasCellViewer extends MEMonitorHandler<IAEGasStack> impleme
 
     @Override
     public IAEGasStack injectItems(IAEGasStack input, Actionable mode, IActionSource src) {
+        if (input == null || input.getStackSize() == 0) {
+            return null;
+        }
         final long size = input.getStackSize();
 
         final IAEGasStack injected = super.injectItems(input, mode, src);
@@ -75,6 +78,9 @@ public class PortableGasCellViewer extends MEMonitorHandler<IAEGasStack> impleme
 
     @Override
     public IAEGasStack extractItems(IAEGasStack request, Actionable mode, IActionSource src) {
+        if (request == null || request.getStackSize() == 0) {
+            return null;
+        }
         final IAEGasStack extractable = super.extractItems(request, mode, src);
 
         if (mode == Actionable.MODULATE && extractable != null) {
