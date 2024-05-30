@@ -1,0 +1,6 @@
+{
+  "parent": "appliedenergistics2:part/fluid_import_bus_base",
+  "textures": {
+    "front": "mekeng:parts/io_bus/gas_import_bus"
+  }
+}

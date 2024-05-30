@@ -1,0 +1,9 @@
+{
+  "parent": "appliedenergistics2:part/fluid_interface_base",
+  "textures": {
+    "sides": "mekeng:parts/interface/sides",
+    "back": "mekeng:parts/interface/back",
+    "front": "mekeng:parts/interface/front",
+    "particle": "mekeng:parts/interface/back"
+  }
+}

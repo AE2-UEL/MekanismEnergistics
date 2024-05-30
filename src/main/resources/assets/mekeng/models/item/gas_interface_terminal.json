@@ -1,0 +1,9 @@
+{
+  "parent": "appliedenergistics2:item/part/display",
+  "textures": {
+    "front": "appliedenergistics2:items/part/interface_terminal",
+    "front_bright": "mekeng:parts/interface_terminal/bright",
+    "front_medium": "mekeng:parts/interface_terminal/medium",
+    "front_dark": "mekeng:parts/interface_terminal/dark"
+  }
+}

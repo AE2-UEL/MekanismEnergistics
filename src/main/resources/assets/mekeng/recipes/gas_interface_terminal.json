@@ -1,0 +1,20 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "type": "appliedenergistics2:part",
+      "part": "part.terminal"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "dyeYellow"
+    },
+    {
+      "type": "appliedenergistics2:part",
+      "part": "material.logic_processor"
+    }
+  ],
+  "result": {
+    "item": "mekeng:gas_terminal"
+  }
+}

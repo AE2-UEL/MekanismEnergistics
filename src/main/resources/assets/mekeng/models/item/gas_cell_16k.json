@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mekeng:items/gas_cell_16k"
+  }
+}

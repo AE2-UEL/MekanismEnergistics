@@ -1,0 +1,6 @@
+{
+  "parent": "appliedenergistics2:part/fluid_storage_bus_base",
+  "textures": {
+    "front": "mekeng:parts/gas_storage_bus"
+  }
+}

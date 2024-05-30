@@ -1,0 +1,25 @@
+{
+  "type": "appliedenergistics2:part_shaped",
+  "result": {
+    "item": "mekeng:gas_core_1k",
+    "count": 1
+  },
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "type": "forge:ore_dict",
+      "ore": "dustGold"
+    },
+    "b": {
+      "item": "#appliedenergistics2:certusCrystal"
+    },
+    "c": {
+      "type": "appliedenergistics2:part",
+      "part": "material.logic_processor"
+    }
+  }
+}

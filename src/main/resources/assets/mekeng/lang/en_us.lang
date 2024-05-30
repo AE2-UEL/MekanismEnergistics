@@ -1,0 +1,38 @@
+itemGroup.mekeng=Mekanism Energistics
+
+item.mekeng:dummy_gas.name=Dummy Gas
+item.mekeng:dummy_gas.error.name=Invalid Gas
+item.mekeng:gas_core_1k.name=§61k§r ME Gas Storage Component
+item.mekeng:gas_core_4k.name=§e4k§r ME Gas Storage Component
+item.mekeng:gas_core_16k.name=§a16k§r ME Gas Storage Component
+item.mekeng:gas_core_64k.name=§b64k§r ME Gas Storage Component
+item.mekeng:gas_cell_1k.name=§61k§r ME Gas Storage Cell
+item.mekeng:gas_cell_4k.name=§e4k§r ME Gas Storage Cell
+item.mekeng:gas_cell_16k.name=§a16k§r ME Gas Storage Cell
+item.mekeng:gas_cell_64k.name=§b64k§r ME Gas Storage Cell
+item.mekeng:portable_gas_cell.name=Portable Gas Cell
+item.mekeng:gas_terminal.name=ME Gas Terminal
+item.mekeng:gas_import_bus.name=ME Gas Import Bus
+item.mekeng:gas_export_bus.name=ME Gas Export Bus
+item.mekeng:gas_interface_part.name=ME Gas Interface
+item.mekeng:gas_storage_bus.name=ME Gas Storage Bus
+item.mekeng:gas_level_emitter.name=ME Gas Level Emitter
+item.mekeng:gas_interface_terminal.name=Gas Interface Configuration Terminal
+item.mekeng:wireless_gas_terminal.name=Wireless Gas Terminal
+item.mekeng:gas_p2p.name=P2P Tunnel - Gas
+
+tile.mekeng:gas_interface.name=ME Gas Interface
+
+gui.mekeng.gas_terminal=Gas Terminal
+gui.mekeng.gas_import=ME Gas Import Bus
+gui.mekeng.gas_export=ME Gas Export Bus
+gui.mekeng.gas_interface=ME Gas Interface
+gui.mekeng.gas_storage_bus=ME Gas Storage Bus
+gui.mekeng.gas_level_emitter=ME Gas Level Emitter
+gui.mekeng.gas_interface_terminal=Gas Interface Configuration Terminal
+gui.mekeng.gas_portable_cell=Portable Cell
+gui.mekeng.wireless_gas_terminal=Wireless Term
+
+tooltip.mekeng.stored_gas=Stored Gas
+
+group.mekeng.gas_io_bus=ME Gas Import/Export Bus

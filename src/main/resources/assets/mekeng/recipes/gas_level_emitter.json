@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "mekeng:gas_level_emitter"
+  },
+  "type": "appliedenergistics2:part_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:redstone_torch"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "dustGold"
+    },
+    {
+      "type": "appliedenergistics2:part",
+      "part": "material.calculation_processor"
+    }
+  ]
+}

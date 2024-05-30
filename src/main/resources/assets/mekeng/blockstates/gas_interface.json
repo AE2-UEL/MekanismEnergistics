@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "normal": {
+      "model": "mekeng:gas_interface"
+    }
+  }
+}

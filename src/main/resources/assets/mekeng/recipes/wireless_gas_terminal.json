@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "mekeng:wireless_gas_terminal"
+  },
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "a",
+    "b",
+    "c"
+  ],
+  "key": {
+    "b": {
+      "item": "mekeng:gas_terminal"
+    },
+    "c": {
+      "item": "appliedenergistics2:dense_energy_cell"
+    },
+    "a": {
+      "type": "appliedenergistics2:part",
+      "part": "material.wireless"
+    }
+  }
+}

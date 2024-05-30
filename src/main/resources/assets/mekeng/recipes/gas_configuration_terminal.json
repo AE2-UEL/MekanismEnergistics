@@ -1,0 +1,15 @@
+{
+  "result": {
+    "item": "mekeng:gas_interface_terminal"
+  },
+  "type": "appliedenergistics2:part_shapeless",
+  "ingredients": [
+    {
+      "type": "appliedenergistics2:part",
+      "part": "part.interface_terminal"
+    },
+    {
+      "item": "mekanism:enrichedalloy"
+    }
+  ]
+}

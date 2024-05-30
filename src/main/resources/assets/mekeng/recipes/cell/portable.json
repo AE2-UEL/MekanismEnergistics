@@ -1,0 +1,21 @@
+{
+  "type": "appliedenergistics2:part_shaped",
+  "result": {
+    "item": "mekeng:portable_gas_cell",
+    "count": 1
+  },
+  "pattern": [
+    "tce"
+  ],
+  "key": {
+    "t": {
+      "item": "appliedenergistics2:chest"
+    },
+    "c": {
+      "item": "mekeng:gas_core_1k"
+    },
+    "e": {
+      "item": "appliedenergistics2:energy_cell"
+    }
+  }
+}

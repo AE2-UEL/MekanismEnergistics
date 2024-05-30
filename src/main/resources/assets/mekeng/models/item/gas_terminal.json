@@ -1,0 +1,9 @@
+{
+  "parent": "appliedenergistics2:item/part/display",
+  "textures": {
+    "front": "appliedenergistics2:items/part/crafting_terminal",
+    "front_bright": "mekeng:parts/gas_terminal/lights_bright",
+    "front_medium": "mekeng:parts/gas_terminal/lights_medium",
+    "front_dark": "mekeng:parts/gas_terminal/lights_dark"
+  }
+}

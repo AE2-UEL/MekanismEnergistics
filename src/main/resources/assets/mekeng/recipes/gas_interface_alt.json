@@ -1,0 +1,11 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "mekeng:gas_interface_part"
+    }
+  ],
+  "result": {
+    "item": "mekeng:gas_interface"
+  }
+}

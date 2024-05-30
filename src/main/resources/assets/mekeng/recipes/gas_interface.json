@@ -1,0 +1,30 @@
+{
+  "type": "appliedenergistics2:part_shaped",
+  "result": {
+    "item": "mekeng:gas_interface",
+    "count": 1
+  },
+  "pattern": [
+    "igi",
+    "a f",
+    "igi"
+  ],
+  "key": {
+    "f": {
+      "type": "appliedenergistics2:part",
+      "part": "material.formation_core"
+    },
+    "i": {
+      "type": "forge:ore_dict",
+      "ore": "ingotIron"
+    },
+    "g": {
+      "type": "forge:ore_dict",
+      "ore": "dustGold"
+    },
+    "a": {
+      "type": "appliedenergistics2:part",
+      "part": "material.annihilation_core"
+    }
+  }
+}

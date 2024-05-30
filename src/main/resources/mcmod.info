@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mekeng",
+  "name": "Mekanism Energistics",
+  "description": "Mekanism support for AE2",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["GlodBlock"],
+  "credits": "Contributors of this project",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

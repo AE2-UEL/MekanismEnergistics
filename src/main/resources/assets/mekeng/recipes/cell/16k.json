@@ -1,0 +1,28 @@
+{
+  "type": "appliedenergistics2:part_shaped",
+  "result": {
+    "item": "mekeng:gas_core_16k",
+    "count": 1
+  },
+  "pattern": [
+    "aba",
+    "cdc",
+    "aca"
+  ],
+  "key": {
+    "d": {
+      "item": "appliedenergistics2:quartz_glass"
+    },
+    "a": {
+      "type": "forge:ore_dict",
+      "ore": "dustRefinedObsidian"
+    },
+    "c": {
+      "item": "mekeng:gas_core_4k"
+    },
+    "b": {
+      "type": "appliedenergistics2:part",
+      "part": "material.calculation_processor"
+    }
+  }
+}
