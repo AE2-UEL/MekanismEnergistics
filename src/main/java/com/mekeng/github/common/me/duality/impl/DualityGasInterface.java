@@ -28,7 +28,6 @@ import appeng.api.storage.data.IAEFluidStack;
 import appeng.api.storage.data.IAEItemStack;
 import appeng.api.storage.data.IAEStack;
 import appeng.api.util.AECableType;
-import appeng.api.util.AEPartLocation;
 import appeng.api.util.DimensionalCoord;
 import appeng.api.util.IConfigManager;
 import appeng.capabilities.Capabilities;
@@ -128,7 +127,7 @@ public class DualityGasInterface implements IGridTickable, IStorageMonitorable, 
         for (int i = 0; i < NUMBER_OF_TANKS; ++i) {
             this.requireWork[i] = null;
         }
-        this.handler = new GasNetworkAdapter(this::getStorageGrid, this.interfaceRequestSource, this.tanks);
+        this.handler = new GasNetworkAdapter(this::getStorageGrid, mySource, this.tanks);
     }
 
     @Nullable

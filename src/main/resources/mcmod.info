@@ -9,7 +9,7 @@
   "updateUrl": "",
   "authorList": ["GlodBlock"],
   "credits": "Contributors of this project",
-  "logoFile": "",
+  "logoFile": "logo.png",
   "screenshots": [],
   "dependencies": []
 }
