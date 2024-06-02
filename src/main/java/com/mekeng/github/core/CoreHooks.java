@@ -42,7 +42,7 @@ public final class CoreHooks {
         return handler.drawGas(side, amount, doTransfer);
     }
 
-    public static GuiBridge hooker$getGasBridge(IStorageChannel<?> channel) {
+    public static GuiBridge hooker$getGuiBridge(IStorageChannel<?> channel) {
         if (channel == AEApi.instance().storage().getStorageChannel(IGasStorageChannel.class)) {
             return GuiWrapper.INSTANCE.wrap(AEGuiBridge.GAS_TERMINAL);
         }

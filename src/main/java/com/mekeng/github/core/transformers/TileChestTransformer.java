@@ -65,7 +65,7 @@ public class TileChestTransformer extends MkEClassTransformer.ClassMapper {
                 ready = false;
                 super.visitFieldInsn(Opcodes.GETFIELD, "appeng/tile/storage/TileChest", "cellHandler", "Lappeng/tile/storage/TileChest$ChestMonitorHandler;");
                 super.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "appeng/tile/storage/TileChest$ChestMonitorHandler", "getChannel", "()Lappeng/api/storage/IStorageChannel;", false);
-                super.visitMethodInsn(Opcodes.INVOKESTATIC, "com/mekeng/github/core/CoreHooks", "hooker$getGasBridge", "(Lappeng/api/storage/IStorageChannel;)Lappeng/core/sync/GuiBridge;", false);
+                super.visitMethodInsn(Opcodes.INVOKESTATIC, "com/mekeng/github/core/CoreHooks", "hooker$getGuiBridge", "(Lappeng/api/storage/IStorageChannel;)Lappeng/core/sync/GuiBridge;", false);
                 super.visitInsn(Opcodes.DUP);
                 super.visitJumpInsn(Opcodes.IFNULL, L);
                 super.visitInsn(Opcodes.ARETURN);
