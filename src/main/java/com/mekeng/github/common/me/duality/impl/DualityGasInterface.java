@@ -22,9 +22,7 @@ import appeng.api.storage.IMEMonitor;
 import appeng.api.storage.IStorageChannel;
 import appeng.api.storage.IStorageMonitorable;
 import appeng.api.storage.IStorageMonitorableAccessor;
-import appeng.api.storage.channels.IFluidStorageChannel;
 import appeng.api.storage.channels.IItemStorageChannel;
-import appeng.api.storage.data.IAEFluidStack;
 import appeng.api.storage.data.IAEItemStack;
 import appeng.api.storage.data.IAEStack;
 import appeng.api.util.AECableType;
@@ -102,7 +100,6 @@ public class DualityGasInterface implements IGridTickable, IStorageMonitorable, 
     private int priority;
 
     private final MEMonitorPassThrough<IAEItemStack> items = new MEMonitorPassThrough<>(new NullInventory<IAEItemStack>(), AEApi.instance().storage().getStorageChannel(IItemStorageChannel.class));
-    private final MEMonitorPassThrough<IAEFluidStack> fluids = new MEMonitorPassThrough<>(new NullInventory<IAEFluidStack>(), AEApi.instance().storage().getStorageChannel(IFluidStorageChannel.class));
     private final MEMonitorPassThrough<IAEGasStack> gases = new MEMonitorPassThrough<>(new NullInventory<IAEGasStack>(), AEApi.instance().storage().getStorageChannel(IGasStorageChannel.class));
     private boolean resetConfigCache = true;
     private IMEMonitor<IAEGasStack> configCachedHandler;
@@ -119,7 +116,6 @@ public class DualityGasInterface implements IGridTickable, IStorageMonitorable, 
         IActionSource mySource = new MachineSource(this.iHost);
         this.interfaceRequestSource = new InterfaceRequestSource(this.iHost);
 
-        this.fluids.setChangeSource(mySource);
         this.items.setChangeSource(mySource);
         this.gases.setChangeSource(mySource);
 
@@ -147,11 +143,6 @@ public class DualityGasInterface implements IGridTickable, IStorageMonitorable, 
                 return null;
             }
             return (IMEMonitor<T>) this.items;
-        } else if (channel == AEApi.instance().storage().getStorageChannel(IFluidStorageChannel.class)) {
-            if (this.hasConfig()) {
-                return null;
-            }
-            return (IMEMonitor<T>) this.fluids;
         } else if (channel == AEApi.instance().storage().getStorageChannel(IGasStorageChannel.class)) {
             if (this.hasConfig()) {
                 if (resetConfigCache) {
@@ -205,11 +196,9 @@ public class DualityGasInterface implements IGridTickable, IStorageMonitorable, 
     public void gridChanged() {
         try {
             this.items.setInternal(this.gridProxy.getStorage().getInventory(AEApi.instance().storage().getStorageChannel(IItemStorageChannel.class)));
-            this.fluids.setInternal(this.gridProxy.getStorage().getInventory(AEApi.instance().storage().getStorageChannel(IFluidStorageChannel.class)));
             this.gases.setInternal(this.gridProxy.getStorage().getInventory(AEApi.instance().storage().getStorageChannel(IGasStorageChannel.class)));
         } catch (final GridAccessException gae) {
             this.items.setInternal(new NullInventory<>());
-            this.fluids.setInternal(new NullInventory<>());
             this.gases.setInternal(new NullInventory<>());
         }
         this.notifyNeighbors();

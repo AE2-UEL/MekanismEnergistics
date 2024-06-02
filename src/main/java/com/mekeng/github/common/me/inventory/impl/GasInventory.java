@@ -1,5 +1,6 @@
 package com.mekeng.github.common.me.inventory.impl;
 
+import appeng.util.Platform;
 import com.mekeng.github.common.me.inventory.IGasInventory;
 import com.mekeng.github.common.me.inventory.IGasInventoryHost;
 import mekanism.api.gas.GasStack;
@@ -19,7 +20,7 @@ public class GasInventory implements IGasInventory {
         final IGasInventoryHost h = host == null ? IGasInventoryHost.empty() : host;
         this.tanks = new GasTank[size];
         for (int i = 0; i < size; i ++) {
-            int index = i;
+            final int index = i;
             this.tanks[i] = new NotifiableGasTank(cap,() -> h.onGasInventoryChanged(this, index));
         }
     }
@@ -138,30 +139,36 @@ public class GasInventory implements IGasInventory {
 
         @Override
         public GasStack draw(int amount, boolean doDraw) {
-            if (doDraw) {
+            GasStack ret = super.draw(amount, doDraw);
+            if (doDraw && Platform.isServer()) {
                 this.callback.run();
             }
-            return super.draw(amount, doDraw);
+            return ret;
         }
 
         @Override
         public int receive(GasStack amount, boolean doReceive) {
-            if (doReceive) {
+            int ret = super.receive(amount, doReceive);
+            if (doReceive && Platform.isServer()) {
                 this.callback.run();
             }
-            return super.receive(amount, doReceive);
+            return ret;
         }
 
         @Override
         public void setMaxGas(int capacity) {
-            this.callback.run();
             super.setMaxGas(capacity);
+            if (Platform.isServer()) {
+                this.callback.run();
+            }
         }
 
         @Override
         public void setGas(GasStack stack) {
-            this.callback.run();
             super.setGas(stack);
+            if (Platform.isServer()) {
+                this.callback.run();
+            }
         }
 
     }
