@@ -46,7 +46,23 @@ public final class AEGasStack extends AEStack<IAEGasStack> implements IAEGasStac
     }
 
     @Nullable
+    public static AEGasStack of(Gas input) {
+        return input == null ? null : new AEGasStack(input, 0);
+    }
+
+    @Nullable
     public static IAEGasStack of(NBTTagCompound data) {
+        long amount = data.getLong("amount");
+        if (amount > Integer.MAX_VALUE) {
+            Gas gas = Gas.readFromNBT(data);
+            if (gas == null) {
+                return null;
+            }
+            return of(gas)
+                    .setStackSize(amount)
+                    .setCountRequestable(data.getLong("countRequestable"))
+                    .setCraftable(data.getBoolean("isCraftable"));
+        }
         GasStack gasStack = GasStack.readFromNBT(data);
         if (gasStack == null) {
             return null;
