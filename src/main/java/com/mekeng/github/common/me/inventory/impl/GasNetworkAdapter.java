@@ -13,7 +13,6 @@ import mekanism.api.gas.Gas;
 import mekanism.api.gas.GasStack;
 import net.minecraft.util.EnumFacing;
 
-import java.util.EnumSet;
 import java.util.function.Supplier;
 
 public class GasNetworkAdapter extends GasInvHandler {

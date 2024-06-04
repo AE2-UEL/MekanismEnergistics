@@ -379,21 +379,17 @@ public class DualityGasInterface implements IGridTickable, IStorageMonitorable, 
             return;
         } else if (req != null) {
             int tankSize = (int) (Math.pow(4, this.getInstalledUpgrades(Upgrades.CAPACITY) + 1) * 1000);
-            if (stored == null || stored.getStackSize() == 0) // need to add stuff!
-            {
+            if (stored == null || stored.getStackSize() == 0) {
                 this.requireWork[slot] = req.copy();
                 this.requireWork[slot].setStackSize(tankSize);
                 return;
-            } else if (req.equals(stored)) // same type ( qty different? )!
-            {
+            } else if (req.equals(stored)) {
                 if (stored.getStackSize() != tankSize) {
                     this.requireWork[slot] = req.copy();
                     this.requireWork[slot].setStackSize(tankSize - stored.getStackSize());
                     return;
                 }
-            } else
-            // Stored != null; dispose!
-            {
+            } else {
                 final IAEGasStack work = stored.copy();
                 this.requireWork[slot] = work.setStackSize(-work.getStackSize());
                 return;

@@ -157,7 +157,12 @@ public class GasInventory implements IGasInventory {
 
         @Override
         public void setGas(GasStack stack) {
-            super.setGas(stack);
+            this.stored = stack;
+            if (this.stored != null) {
+                if (stored.amount <= 0) {
+                    stored = null;
+                }
+            }
             if (Platform.isServer()) {
                 this.callback.run();
             }

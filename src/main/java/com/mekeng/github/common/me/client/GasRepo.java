@@ -10,7 +10,6 @@ import appeng.client.gui.widgets.IScrollSource;
 import appeng.client.gui.widgets.ISortSource;
 import appeng.core.AEConfig;
 import appeng.util.Platform;
-import appeng.util.prioritylist.IPartitionList;
 import com.mekeng.github.common.me.data.IAEGasStack;
 import com.mekeng.github.common.me.storage.IGasStorageChannel;
 import com.mekeng.github.util.Utils;
@@ -30,7 +29,6 @@ public class GasRepo {
     private int rowSize = 9;
 
     private String searchString = "";
-    private IPartitionList<IAEGasStack> myPartitionList;
     private boolean hasPower;
 
     public GasRepo(final IScrollSource src, final ISortSource sortSrc) {
@@ -68,9 +66,6 @@ public class GasRepo {
 
         boolean notDone;
         for (IAEGasStack gs : this.list) {
-            if (this.myPartitionList != null && !this.myPartitionList.isListed(gs)) {
-                continue;
-            }
 
             if (viewMode == ViewItems.CRAFTABLE && !gs.isCraftable()) {
                 continue;
