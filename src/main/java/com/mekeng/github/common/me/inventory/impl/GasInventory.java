@@ -9,8 +9,6 @@ import net.minecraft.nbt.NBTTagCompound;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import java.util.Arrays;
-import java.util.Iterator;
 
 public class GasInventory implements IGasInventory {
 
@@ -120,12 +118,6 @@ public class GasInventory implements IGasInventory {
                 tank.setMaxGas(cap);
             }
         }
-    }
-
-    @Nonnull
-    @Override
-    public Iterator<GasTank> iterator() {
-        return Arrays.stream(this.tanks).iterator();
     }
 
     private static class NotifiableGasTank extends GasTank {

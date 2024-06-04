@@ -5,7 +5,7 @@ import mekanism.api.gas.GasTank;
 
 import javax.annotation.Nullable;
 
-public interface IGasInventory extends Iterable<GasTank> {
+public interface IGasInventory {
 
     int size();
 
