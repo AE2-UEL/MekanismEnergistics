@@ -100,7 +100,10 @@ public class ContainerGasInterface extends ContainerGasConfigurable<IGasInterfac
     @Override
     public void receiveGasSlots(Map<Integer, IAEGasStack> gases) {
         super.receiveGasSlots(gases);
-        this.tankSync.readPacket(gases);
+        // Prevent cheat packet.
+        if (Platform.isClient()) {
+            this.tankSync.readPacket(gases);
+        }
     }
 
     private IConfigManagerHost getGui() {

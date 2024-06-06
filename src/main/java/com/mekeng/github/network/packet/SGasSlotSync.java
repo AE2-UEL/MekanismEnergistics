@@ -6,6 +6,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.Map;
 
@@ -25,6 +27,7 @@ public class SGasSlotSync extends CGasSlotSync {
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
     public IMessageHandler<CGasSlotSync, IMessage> getHandler() {
         return (message, ctx) -> {
             EntityPlayer player = Minecraft.getMinecraft().player;
