@@ -34,7 +34,7 @@ public final class ParaSerializer {
                 buffer.writeByte(PT.SHORT.ordinal());
                 buffer.writeShort((short) o);
             } else if (o instanceof Boolean) {
-                buffer.writeByte(PT.BOOLEN.ordinal());
+                buffer.writeByte(PT.BOOLEAN.ordinal());
                 buffer.writeBoolean((boolean) o);
             } else if (o instanceof String) {
                 buffer.writeByte(PT.STRING.ordinal());
@@ -76,7 +76,7 @@ public final class ParaSerializer {
                     case SHORT :
                         objs[i] = buffer.readShort();
                         break;
-                    case BOOLEN :
+                    case BOOLEAN:
                         objs[i] = buffer.readBoolean();
                         break;
                     case STRING :
@@ -106,7 +106,7 @@ public final class ParaSerializer {
         INT,
         LONG,
         SHORT,
-        BOOLEN,
+        BOOLEAN,
         STRING,
         STACK,
         NBT,
