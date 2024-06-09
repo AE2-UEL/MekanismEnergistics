@@ -2,6 +2,7 @@ package com.mekeng.github.proxy;
 
 import appeng.api.AEApi;
 import appeng.api.config.Upgrades;
+import appeng.util.Platform;
 import com.mekeng.github.MekEng;
 import com.mekeng.github.common.ItemAndBlocks;
 import com.mekeng.github.common.RegistryHandler;
@@ -10,6 +11,7 @@ import com.mekeng.github.common.me.storage.IGasStorageChannel;
 import com.mekeng.github.common.me.storage.impl.GasCellGuiHandler;
 import com.mekeng.github.common.me.storage.impl.GasStorageChannel;
 import com.mekeng.github.network.Packets;
+import com.mekeng.github.xmod.nae.NAEInit;
 import mekanism.common.MekanismBlocks;
 import mekanism.common.MekanismItems;
 import net.minecraft.item.ItemStack;
@@ -46,6 +48,9 @@ public class CommonProxy {
         NetworkRegistry.INSTANCE.registerGuiHandler(MekEng.INSTANCE, GuiHandler.INSTANCE);
         this.loadP2P();
         this.loadUpgrades();
+        if (Platform.isModLoaded("nae2")) {
+            NAEInit.loadExposerHandler();
+        }
     }
 
     private void loadP2P() {
