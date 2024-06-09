@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = MekEng.MODID, useMetadata = true, dependencies = "required-after:appliedenergistics2@[v0.56.5,);required-after:mekanism")
+@Mod(modid = MekEng.MODID, name = "Mekanism Energistics", useMetadata = true, dependencies = "required-after:appliedenergistics2@[v0.56.5,);required-after:mekanism")
 public class MekEng {
 
     public static final TunnelType GAS;
