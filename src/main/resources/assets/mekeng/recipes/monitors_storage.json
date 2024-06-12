@@ -1,0 +1,15 @@
+{
+    "result": {
+        "item": "mekeng:gas_storage_monitor"
+    },
+    "type": "appliedenergistics2:part_shapeless",
+    "ingredients": [
+        {
+            "item": "mekeng:gas_level_emitter"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "itemIlluminatedPanel"
+        }
+    ]
+}

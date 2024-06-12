@@ -17,6 +17,8 @@ import com.mekeng.github.common.part.PartGasLevelEmitter;
 import com.mekeng.github.common.part.PartGasStorageBus;
 import com.mekeng.github.common.part.PartGasTerminal;
 import com.mekeng.github.common.part.p2p.PartP2PGases;
+import com.mekeng.github.common.part.reporting.PartGasConversionMonitor;
+import com.mekeng.github.common.part.reporting.PartGasStorageMonitor;
 import com.mekeng.github.common.tile.TileGasInterface;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
@@ -53,6 +55,8 @@ public class ItemAndBlocks {
     public static ItemMkEPart<PartGasInterfaceConfigurationTerminal> GAS_INTERFACE_TERMINAL;
     public static ItemWirelessGasTerminal WIRELESS_GAS_TERMINAL;
     public static ItemMkEPart<PartP2PGases> GAS_P2P;
+    public static ItemMkEPart<PartGasStorageMonitor> GAS_STORAGE_MONITOR;
+    public static ItemMkEPart<PartGasConversionMonitor> GAS_CONVERSION_MONITOR;
 
     public static void init(RegistryHandler regHandler) {
         ItemStack casing = AEApi.instance().definitions().materials().emptyStorageCell().maybeStack(1).orElse(null);
@@ -75,6 +79,8 @@ public class ItemAndBlocks {
         regHandler.item("gas_interface_terminal", GAS_INTERFACE_TERMINAL = new ItemMkEPart<>(PartGasInterfaceConfigurationTerminal::new));
         regHandler.item("wireless_gas_terminal", WIRELESS_GAS_TERMINAL = new ItemWirelessGasTerminal());
         regHandler.item("gas_p2p", GAS_P2P = new ItemMkEPart<>(PartP2PGases::new));
+        regHandler.item("gas_storage_monitor",GAS_STORAGE_MONITOR = new ItemMkEPart<>(PartGasStorageMonitor::new));
+        regHandler.item("gas_conversion_monitor",GAS_CONVERSION_MONITOR = new ItemMkEPart<>(PartGasConversionMonitor::new));
         regHandler.block("gas_interface", GAS_INTERFACE = new BlockGasInterface(), TileGasInterface.class);
     }
 

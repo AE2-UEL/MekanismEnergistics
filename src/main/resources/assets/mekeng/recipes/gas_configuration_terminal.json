@@ -9,7 +9,8 @@
       "part": "part.interface_terminal"
     },
     {
-      "item": "mekanism:enrichedalloy"
+      "type": "forge:ore_dict",
+      "ore": "itemIlluminatedPanel"
     }
   ]
 }
