@@ -65,11 +65,11 @@ public class ItemGasHandler {
         return gas == null ? 0 : gas.amount;
     }
 
-    public GasStack gasStack(){
+    public GasStack gasStack() {
         return this.handler.getGas(this.stack);
     }
 
-    public Gas gas(){
+    public Gas gas() {
         GasStack gas = this.handler.getGas(stack);
         return gas == null ? null : gas.getGas();
     }

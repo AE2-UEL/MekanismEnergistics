@@ -27,6 +27,8 @@ public class ClientProxy extends CommonProxy {
         super.init(event);
         Minecraft.getMinecraft().getItemColors().registerItemColorHandler((s, i) -> AEColor.TRANSPARENT.getVariantByTintIndex(i), ItemAndBlocks.GAS_TERMINAL);
         Minecraft.getMinecraft().getItemColors().registerItemColorHandler((s, i) -> AEColor.TRANSPARENT.getVariantByTintIndex(i), ItemAndBlocks.GAS_INTERFACE_TERMINAL);
+        Minecraft.getMinecraft().getItemColors().registerItemColorHandler((s, i) -> AEColor.TRANSPARENT.getVariantByTintIndex(i), ItemAndBlocks.GAS_STORAGE_MONITOR);
+        Minecraft.getMinecraft().getItemColors().registerItemColorHandler((s, i) -> AEColor.TRANSPARENT.getVariantByTintIndex(i), ItemAndBlocks.GAS_CONVERSION_MONITOR);
         Minecraft.getMinecraft().getItemColors().registerItemColorHandler((s, i) -> {
             GasStack gas = ItemAndBlocks.DUMMY_GAS.getGasStack(s);
             return gas != null ? gas.getGas().getTint() : 0xFFFFFFFF;

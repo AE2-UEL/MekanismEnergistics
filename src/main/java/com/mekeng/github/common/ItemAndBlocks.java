@@ -79,8 +79,8 @@ public class ItemAndBlocks {
         regHandler.item("gas_interface_terminal", GAS_INTERFACE_TERMINAL = new ItemMkEPart<>(PartGasInterfaceConfigurationTerminal::new));
         regHandler.item("wireless_gas_terminal", WIRELESS_GAS_TERMINAL = new ItemWirelessGasTerminal());
         regHandler.item("gas_p2p", GAS_P2P = new ItemMkEPart<>(PartP2PGases::new));
-        regHandler.item("gas_storage_monitor",GAS_STORAGE_MONITOR = new ItemMkEPart<>(PartGasStorageMonitor::new));
-        regHandler.item("gas_conversion_monitor",GAS_CONVERSION_MONITOR = new ItemMkEPart<>(PartGasConversionMonitor::new));
+        regHandler.item("gas_storage_monitor", GAS_STORAGE_MONITOR = new ItemMkEPart<>(PartGasStorageMonitor::new));
+        regHandler.item("gas_conversion_monitor", GAS_CONVERSION_MONITOR = new ItemMkEPart<>(PartGasConversionMonitor::new));
         regHandler.block("gas_interface", GAS_INTERFACE = new BlockGasInterface(), TileGasInterface.class);
     }
 
