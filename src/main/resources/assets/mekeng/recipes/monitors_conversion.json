@@ -1,0 +1,19 @@
+{
+    "result": {
+        "item": "mekeng:gas_conversion_monitor"
+    },
+    "type": "appliedenergistics2:part_shapeless",
+    "ingredients": [
+        {
+            "type": "appliedenergistics2:part",
+            "part": "material.formation_core"
+        },
+        {
+            "item": "mekeng:gas_storage_monitor"
+        },
+        {
+            "type": "appliedenergistics2:part",
+            "part": "material.annihilation_core"
+        }
+    ]
+}

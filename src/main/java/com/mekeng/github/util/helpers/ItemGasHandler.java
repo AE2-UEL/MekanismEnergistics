@@ -1,5 +1,6 @@
 package com.mekeng.github.util.helpers;
 
+import mekanism.api.gas.Gas;
 import mekanism.api.gas.GasStack;
 import mekanism.api.gas.IGasItem;
 import mekanism.common.base.ITierItem;
@@ -62,6 +63,15 @@ public class ItemGasHandler {
     public int gasAmount() {
         GasStack gas = this.handler.getGas(this.stack);
         return gas == null ? 0 : gas.amount;
+    }
+
+    public GasStack gasStack(){
+        return this.handler.getGas(this.stack);
+    }
+
+    public Gas gas(){
+        GasStack gas = this.handler.getGas(stack);
+        return gas == null ? null : gas.getGas();
     }
 
     public int capacity() {
