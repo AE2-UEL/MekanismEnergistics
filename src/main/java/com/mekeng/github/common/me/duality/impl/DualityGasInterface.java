@@ -123,7 +123,21 @@ public class DualityGasInterface implements IGridTickable, IStorageMonitorable, 
         for (int i = 0; i < NUMBER_OF_TANKS; ++i) {
             this.requireWork[i] = null;
         }
-        this.handler = new GasNetworkAdapter(this::getStorageGrid, mySource, this.tanks);
+
+        if (isMekCEuInstalled()) {
+            this.handler = new GasInvHandler(this.tanks);
+        } else {
+            this.handler = new GasNetworkAdapter(this::getStorageGrid, mySource, this.tanks);
+        }
+    }
+
+    private static boolean isMekCEuInstalled() {
+        try {
+            Class.forName("mekanism.common.concurrent.TaskExecutor");
+            return true;
+        } catch (ClassNotFoundException e) {
+            return false;
+        }
     }
 
     @Nullable
