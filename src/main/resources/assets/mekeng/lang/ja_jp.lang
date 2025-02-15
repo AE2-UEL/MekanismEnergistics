@@ -1,0 +1,40 @@
+itemGroup.mekeng=Mekanism Energistics
+
+item.mekeng:dummy_gas.name=ダミーガス
+item.mekeng:dummy_gas.error.name=無効なガス
+item.mekeng:gas_core_1k.name=§61k§r MEガスストレージコンポーネント
+item.mekeng:gas_core_4k.name=§e4k§r MEガスストレージコンポーネント
+item.mekeng:gas_core_16k.name=§a16k§r MEガスストレージコンポーネント
+item.mekeng:gas_core_64k.name=§b64k§r MEガスストレージコンポーネント
+item.mekeng:gas_cell_1k.name=§61k§r MEガスストレージセル
+item.mekeng:gas_cell_4k.name=§e4k§r MEガスストレージセル
+item.mekeng:gas_cell_16k.name=§a16k§r MEガスストレージセル
+item.mekeng:gas_cell_64k.name=§b64k§r MEガスストレージセル
+item.mekeng:portable_gas_cell.name=ポータブルガスセル
+item.mekeng:gas_terminal.name=MEガスターミナル
+item.mekeng:gas_import_bus.name=MEガス入力バス
+item.mekeng:gas_export_bus.name=MEガス出力バス
+item.mekeng:gas_interface_part.name=MEガスインターフェース
+item.mekeng:gas_storage_bus.name=MEガスストレージバス
+item.mekeng:gas_level_emitter.name=MEガスレベルエミッタ
+item.mekeng:gas_interface_terminal.name=ガスインターフェース設定用ターミナル
+item.mekeng:wireless_gas_terminal.name=ワイヤレスガスターミナル
+item.mekeng:gas_storage_monitor.name=MEガスストレージモニター
+item.mekeng:gas_conversion_monitor.name=MEガス変換モニター
+item.mekeng:gas_p2p.name=ガスP2Pトンネル
+
+tile.mekeng:gas_interface.name=MEガスインターフェース
+
+gui.mekeng.gas_terminal=ガスターミナル
+gui.mekeng.gas_import=MEガス入力バス
+gui.mekeng.gas_export=MEガス出力バス
+gui.mekeng.gas_interface=MEガスインターフェース
+gui.mekeng.gas_storage_bus=MEガスストレージバス
+gui.mekeng.gas_level_emitter=MEガスレベルエミッタ
+gui.mekeng.gas_interface_terminal=ガスインターフェース設定用ターミナル
+gui.mekeng.gas_portable_cell=ポータブルセル
+gui.mekeng.wireless_gas_terminal=ワイヤレスガスターミナル
+
+tooltip.mekeng.stored_gas=貯蔵ガス
+
+group.mekeng.gas_io_bus=MEガス入力/出力バス
